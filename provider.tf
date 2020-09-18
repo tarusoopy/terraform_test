@@ -5,6 +5,8 @@ terraform {
 
   backend "gcs" {
     bucket = "pubsub-test-terraform-state"
+    prefix = "terraform.tfstate"
+    credentials = "~/terraform_key/sdns-prd-273508-82048fb6e653.json"
   }
 }
 
