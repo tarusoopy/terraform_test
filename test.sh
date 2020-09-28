@@ -6,4 +6,4 @@ echo ""
 echo "This is parent test.sh!" > /tmp/output
 echo "" >> /tmp/output
 
-source ${function1}
+${function1}
