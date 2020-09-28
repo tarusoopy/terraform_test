@@ -1,8 +1,8 @@
-resource "google_compute_instance" "winrmtest-1" {
-  name         = "winrmtest-1"
+resource "google_compute_instance" "winrmtest-2" {
+  name         = "winrmtest-2"
   machine_type = "g1-small"
   zone         = "asia-northeast1-b"
-  description  = "winrmtest-1"
+  description  = "winrmtest-2"
   tags         = ["http-server", "https-server"]
 
   boot_disk {

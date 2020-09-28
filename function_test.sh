@@ -1,1 +1,1 @@
-echo "This is function test!"
+echo "This is function_test.sh!"

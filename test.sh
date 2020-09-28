@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "This is test.sh!"
+echo "This is parent test.sh!"
 echo ""
 
 source function_test.sh
