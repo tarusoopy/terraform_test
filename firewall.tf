@@ -1,6 +1,6 @@
 resource "google_compute_firewall" "winrm-test" {
   name    = "winrm-test"
-  network = "${google_compute_network.winrm-test.name}"
+  network = "${google_compute_network.winrm-test-2.name}"
 
   allow {
     protocol = "icmp"

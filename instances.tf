@@ -2,6 +2,14 @@ resource "google_compute_address" "winrmtest-2" {
   name   = "winrmtest-2"
   region = "${var.region}"
 }
+
+data "template_file" "test" {
+  template = "${file("./test.sh")}"
+  vars = {
+    function1 = "${file("./function_test.sh")}"
+  }
+}
+
 resource "google_compute_instance" "winrmtest-2" {
   name         = "winrmtest-2"
   machine_type = "g1-small"
@@ -25,7 +33,7 @@ resource "google_compute_instance" "winrmtest-2" {
 
   }
 
-  metadata_startup_script = "${file("./test.sh")}"
+  metadata_startup_script = "${data.template_file.test.rendered}"
 
   service_account {
     scopes = ["userinfo-email", "compute-ro", "storage-ro", "bigquery", "monitoring"]
