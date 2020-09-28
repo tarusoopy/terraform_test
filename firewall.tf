@@ -11,5 +11,5 @@ resource "google_compute_firewall" "winrm-test" {
     ports    = ["22", "80", "443", "38080"]
   }
 
-  target_tags = ["${google_compute_instance.winrm-test.tags}"]
+  target_tags = ["http-server", "https-server"]
 }
