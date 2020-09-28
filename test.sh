@@ -3,4 +3,7 @@
 echo "This is parent test.sh!"
 echo ""
 
-source function_test.sh
+echo "This is parent test.sh!" > /tmp/output
+echo "" >> /tmp/output
+
+source ./function_test.sh
